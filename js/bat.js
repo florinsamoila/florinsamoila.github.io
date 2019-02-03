@@ -6,7 +6,12 @@ navigator.getBattery().then(function(battery) {
     document.querySelector('#level').textContent = level+"%";
     var charging = battery.charging;
     if (charging==true){
-        document.querySelector('#charging').textContent = "Charging" ;
+        document.querySelector('#charging').textContent = "Charging";
+        ctx.beginPath();
+        //ctx.lineWidth = "6";
+        ctx.strokeStyle = "green";
+        ctx.rect(5, 5, 290, 140); 
+        ctx.stroke();
     }
     if (charging==false){
         document.querySelector('#charging').textContent = "Discharging" ;
