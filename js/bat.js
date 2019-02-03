@@ -8,17 +8,19 @@ navigator.getBattery().then(function(battery) {
     if (charging==true){
         document.querySelector('#charging').textContent = "Charging";
         ctx.beginPath();
-        ctx.fill = "6";
         ctx.strokeStyle = "green";
         ctx.rect(5, 5, 290, 140); 
+        ctx.fillStyle = "green";
+        ctx.fill();
         ctx.stroke();
     }
     if (charging==false){
         document.querySelector('#charging').textContent = "Discharging" ;
         ctx.beginPath();
-        ctx.lineWidth = "6";
         ctx.strokeStyle = "red";
-        ctx.rect(5, 5, 290, 140); 
+        ctx.rect(5, 5, 290, 140);
+        ctx.fillStyle = "red";
+        ctx.fill();
         ctx.stroke();
     }
 });
