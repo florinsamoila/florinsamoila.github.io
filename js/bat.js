@@ -8,7 +8,7 @@ navigator.getBattery().then(function(battery) {
     if (charging==true){
         document.querySelector('#charging').textContent = "Charging";
         ctx.beginPath();
-        //ctx.lineWidth = "6";
+        ctx.fill = "6";
         ctx.strokeStyle = "green";
         ctx.rect(5, 5, 290, 140); 
         ctx.stroke();
